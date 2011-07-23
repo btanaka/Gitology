@@ -1,0 +1,392 @@
+/* @override http://127.0.0.1:8888/joesiteengine/css/main.css */
+
+/* orange: D07000
+   red: 800000
+   brown: 8D4D03 */
+
+* {
+	padding: 0px;
+	margin: 0px;	
+}
+
+
+body {
+	background: #efefef;
+	font-size: 80%;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #222;
+	text-align: center;
+	line-height: 1.5em;
+	background: #000000 url( "../images/bggrad01.gif" ) repeat-x;
+}
+
+div#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	border: 8px solid #dfdfdf;
+	background: #fff;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+a {
+	/*color: #8d4d03;*/
+	/* color: #900; */
+	color: #377c3b; /* the new green */
+}
+
+a:hover {
+	color: #222;
+	background: #FEFFB5;
+}
+
+a:visited {
+/*	color: #900; */
+	color: #377c3b; /* the new green */
+}
+
+#banner	{
+/*	background: #dfdfdf; */
+	background: #fff;
+	/*height: 52px;*/
+	padding: 20px 0px 3px 20px;
+	text-align: left;
+}
+#banner h1 {
+	font-size: 3em;
+	text-align: left;
+	padding: 25px 10px 12px 10px;
+	text-decoration: none;
+}
+
+#tagline {
+	background: #333;
+	text-align: left;
+	color: #fff;
+	font-weight: bold;
+	padding: 1px 6px 1px 16px;
+	margin: 0px 0px 20px 0px;
+}
+
+#taglineold {
+	background: #efefef;
+	text-align: right;
+	padding: 6px 6px 6px 6px;
+	margin: 0px 0px 20px 0px;
+	border-left: 1px solid #afafaf;
+	border-right: 1px solid #afafaf;
+	border-bottom: 1px solid #afafaf;
+}
+
+#menu {
+}
+
+#contentcontainer {
+}
+
+table {
+	width: 100%;
+	text-align: left;
+}
+
+.leftsidebar {
+	width:  20%;
+	background: #fff;
+	padding: 3px 3px 3px 3px;
+}
+.middle {	
+	padding: 13px 13px 13px 13px;
+	/*border-left: 1px solid #dfdfdf;*/
+	border-right: 1px solid #dfdfdf;
+}
+.middle ul {
+	padding-left: 2em;
+}
+.middle li {
+	margin-bottom: .2em;
+}
+.middle ol {
+	padding-left: 2em;
+}
+.rightsidebar {
+	width:  20%;
+	background: #fff;
+	padding: 3px 3px 3px 3px;
+}
+
+h1 {
+	padding: 12px 3px 3px 0px;
+	margin-bottom: 10px;
+/*	color: #800000;*/
+	color: #377c3b; /* the new green */
+	font-size: 1.75em;
+	/*border-bottom: 1px solid #dfdfdf;*/
+/*	font-family: Georgia, "Times New Roman", Times, serif;*/
+}
+
+h2 {
+	margin-top: 32px;
+	margin-bottom: 1em;
+	padding: 3px 3px 3px 0px;
+	color: #222;
+	font-size: 1.25em;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+h3 {
+	margin-top: 12px;
+	padding: 3px 3px 3px 0px;
+	color: #222;
+	font-size: 1em;
+}
+
+#footer {
+	padding: 3px 3px 6px 3px;
+	border-top: 1px solid #afafaf;
+	font-size: 0.9em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.dadtitle {
+	font-weight: bold;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.daddesc {
+	display:none; font-size: 1em; margin-bottom: 12px; margin-top: 2px; background:#fff; border:1px solid #afafaf;
+}
+
+.basictable {
+	padding: 0px;
+	margin: 0px;
+}
+.basictable td {
+	border-bottom: 1px solid #afafaf;
+	border-right: 1px solid #dfdfdf;
+	padding: 4px;
+	margin: 0px;
+}
+.basictable th {
+	background: #333;
+	color: #efefef;
+	text-align: center;
+}
+
+.punchy {
+/*	background: #800;*/
+	background: #efefef;
+	padding: 3px 3px 3px 13px;
+	color: #333;
+	font-weight: bold;
+	border: 4px solid #afafaf;
+}
+
+/* @group selfad */
+.selfad {
+	padding: 1px;
+	line-height: 1.25em;
+	background: #dfdfdf;
+	margin-top: 1em;
+}
+.selfad h1 {
+	font-size: 1.1em;
+	color: #800;
+	padding-bottom: 4px;
+	text-align: center;
+}
+.selfad p {
+	padding: 4px;
+	color: #222;
+	background: #fff;
+}
+/* @end */
+
+/* @group selfad2 */
+.selfad2 {
+	padding: 0px;
+	line-height: 1.25em;
+	background: #fff;
+	margin-top: 1em;
+	border: 1px solid #afafaf;
+	background: #fffeb5;
+}
+.selfad2 h1 {
+	font-size: 1.1em;
+	color: #800;
+	background: #dfdfdf;
+	padding-bottom: 4px;
+	text-align: center;
+}
+.selfad2 p {
+	padding: 4px;
+	color: #222;
+	background: #fffeb5;
+}
+/* @end */
+
+.selfad3 {
+	padding: 0px;
+	border: 0px solid #000;
+}
+
+.bookcover {
+	padding-top: 4px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.sidebarblurb {
+	text-align: left;
+	padding-top: 6px;
+	margin-top: 1em;
+}
+.sidebarblurb h1 {
+	background: #fff;
+	color: #666;
+	font-size: 1em;
+	text-align: center;
+	padding: 2px 1px 2px 1px;
+	margin-bottom: .5em;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.sidebarblurb li {
+	margin-left: 14px;
+}
+
+.sidebarblurb2 {
+	text-align: left;
+	padding-top: 6px;
+	margin-top: 1em;
+}
+.sidebarblurb2 h1 {
+	background: #dfdfdf;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 2px 1px 2px 1px;
+	margin-bottom: 1em;
+}
+
+blockquote {
+	padding-left: 2em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+.divrevealbox {
+	margin-top: 1em;
+}
+
+.testimonialblurb {
+	border: 1px solid #afafaf;
+	background: #efefef;
+	padding: 6px;
+}
+
+.greenbutton {
+	background: url(../images/greenbutton.png) no-repeat;
+	width: 300px;
+	height: 50px;
+}
+.greenbutton p {
+	padding:16px 9px 9px 9px;
+	font-weight: bold;
+	font-size:  1.25em;
+	color:  inherit;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feedlist {
+	font-size: 1em;
+	text-align: left;
+}
+
+.draftnotice {
+	font-size: 0.8em;
+	border: 1px solid #dfdfdf;
+	background: #FEFFB5;
+	padding: 0.5em;
+	color: #555;
+	margin-bottom: 1em;
+}
+
+.inthisguide {
+	font-size: 1em;
+	border: 1px solid #dfdfdf;
+	background: #efefef;
+	padding: 0.5em;
+/*	color: #555;*/
+	margin-bottom: 1em;
+	line-height: 1em;
+/*	list-style-type: disc;*/
+}
+
+code {
+	color: #00f;
+	font-size: 1.2em;
+}
+pre {
+	background: #fff;
+	padding: 2px 1px 0px 10px;
+	border: 1px solid #cfcfcf;
+	margin: 0px 0px 10px 0px;
+}
+
+/* @group CSS TABS */
+
+/* begin css tabs */
+
+ul#tabnav { /* general settings */
+text-align: left; /* set to left, right or center */
+margin: 0em 0 1em 0em; /* set margins as desired */
+font: bold 12px verdana, arial, sans-serif; /* set font as desired */
+border-bottom: 1px solid #afafaf; /* set border COLOR as desired */
+list-style-type: none;
+padding: 3px 10px 3px 20px; /* THIRD number must change with respect to padding-top (X) below */
+background: #fff;
+}
+
+ul#tabnav li { /* do not change */
+display: inline;
+}
+
+body#tab1 li.tab1, body#tab2 li.tab2, body#tab3 li.tab3, body#tab4 li.tab4, body#tab5 li.tab5, body#tab6 li.tab6, body#tab7 li.tab7 { /* settings for selected tab */
+border-bottom: 1px solid #fff; /* set border color to page background color */
+background-color: #fff; /* set background color to match above border color */
+}
+
+body#tab1 li.tab1 a, body#tab2 li.tab2 a, body#tab3 li.tab3 a, body#tab4 li.tab4 a, body#tab5 li.tab5 a, body#tab6 li.tab6 a, body#tab7 li.tab7 a { /* settings for selected tab link */
+background-color: #fff; /* set selected tab background color as desired */
+color: #777; /* set selected tab link color as desired */
+position: relative;
+top: 1px;
+padding-top: 4px; /* must change with respect to padding (X) above and below */
+}
+
+ul#tabnav li a { /* settings for all tab links */
+padding: 3px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 1px solid #afafaf; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: #dfdfdf; /* set unselected tab background color as desired */
+color: #666; /* set unselected tab link color as desired */
+margin-right: 0px; /* set additional spacing between tabs as desired */
+text-decoration: none;
+border-bottom: none;
+}
+
+ul#tabnav a:hover { /* settings for hover effect */
+background: #fff; /* set desired hover color */
+}
+
+/* end css tabs */
+
+/* @end */
+

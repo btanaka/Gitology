@@ -1,0 +1,37 @@
+!!!
+%html{"xmlns"=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en"}
+
+%head
+  %title= TITLE
+  %link{:rel=>'stylesheet', :href => 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css', :type => 'text/css'}
+  %link{:rel=>'stylesheet', :href=>'main.css', :type => "text/css"}
+  %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js', :type => 'text/javascript', :charset => 'utf-8' }
+  %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js', :type => 'text/javascript', :charset => 'utf-8' }
+  
+  -#:javascript
+  <script>
+  $(document).ready(function() {
+  $("#accordion").accordion();
+  });
+  </script>
+  
+
+
+%body
+  #container
+    #banner
+      -# <a href="index.php"><img src=gears2withwords.go3.80.png border="0" alt="Gitology"></a>
+      %a(href="/")
+        %img{:src => 'gears2withwords.go3.80.png'}
+    #tagline
+      A wealth of knowledge about Git &mdash; an open source version control system
+
+    %h1= @title
+    
+    #contentcontainer
+    =yield  
+    
+    #footer
+      Gitology is good for you!
+      Contact: brian at gitology dot com
+      

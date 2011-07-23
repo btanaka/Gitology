@@ -1,10 +1,9 @@
 require 'rubygems'
 require 'sinatra';
 
+TITLE = "Gitology - A wealth of knowledge about Git"
+
 get '/' do
-  'Hello World!'
+  haml :index
 end
 
-get '/foo' do
-  'you said foo'
-end
