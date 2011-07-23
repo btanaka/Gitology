@@ -1,0 +1,177 @@
+Branching Basics
+================
+
+<%draft%>
+
+<div class="inthisguide">
+<strong>In This Guide:</strong>
+<p>
+<ul>
+<li> What is Branching?</li>
+<li>How Do Branches Work in Git?</li>
+<li>A Simple Example of Branching</li>
+</ul>
+</p>
+</div>
+
+What is Branching?
+--------
+
+The history of changes in a project is a linear timeline of events. Each change, one after another, is recorded in chronological order. 
+
+Having one linear history is great. You can see all the changes that led to any version of the project.
+
+The problem is that a single, linear history is restrictive. How so? Let's say you are working on a project. For an easy example, let's take this article you're reading now. I'm writing away, explaining what branches are and how they work in Git. Because I'm using Git to track changes to the article, I have a nice, linear, timeline of all my changes. But let's say I wake up one morning and decide that the article would be clearer and easier to understand if I organize it a different way. Wouldn't it be great if I could try my wild new ideas in a new *branch*--an alternate timeline that runs parallel to my main or *master* timeline? That way I can track all my changes as I work in the new branch, but if I don't like the way the new branch works out, I can simply hop back onto the master branch. And if I *do* like the way it works out, I can *merge* all the changes in the alternate branch into the master branch, thereby uniting the previously diverged timelines.
+
+Ah, the freedom!
+
+Now, the example above may sound contrived, but I really am tracking this writing project (and the website that serves it) in Git, and I really do branch to try out experimental changes. Once you've tried it, you'll see how handy it is. If you've ever written a long document, changed a bunch of stuff only to realize that you liked it better the other way (some unknown number of changes in the past), you know how painful it is to try to get back to a specific version. If instead you create a new branch to try out an experiment, it's absurdly easy to get back to where you were.
+
+Of course Git is much more commonly used for software projects than writing projects. How is branching useful in programming? There are many, many ways branching is not only useful, but downright indispensable. One way is analogous to my writing example: trying out experimental features. Maybe the changes you're playing with will be great and merged back into the master branch, or maybe they'll be terrible, and you'll be glad they haven't polluted the master branch. Other ways include: fixing bugs in specific versions of the code, submitting versions for review while proceeding to work on the next version, and creating new features to be merged upon completion. At any given time, you may have multiple branches in a single project, each branch serving a different purpose.
+
+If branching is a new concept to you, it's likely you won't fully appreciate the power of branching until you've done it a few times. But, trust me, you will learn to love it.
+
+If you have experience with branching in other VCSes, I think you'll like how Git handles branching--probably more than how they're handled in your current VCS. Easy, elegant branching is one of Git's major strengths.
+
+How Do Branches Work in Git?
+---------
+
+Ask any Git enthusiast why they like Git, and excellent branching is one of the first things they'll mention.
+
+Let's explore an overview of how branches work in Git and see what all the hubbub is about.
+
+**Creating new branches and switching between branches in Git is fast and easy.** It's so trivially easy that it encourages branching, which is enormously beneficial to workflow. Need to fix a bug? Want to try out an experimental feature? Create a branch. It's quick and easy. I described basic branch examples ahead in the next section, "A Simple Example of Branching", and you will see how easy it is. 
+
+**Git helps you merge branches.** Creating branches easily is fine and well, but you'll often want to merge those branches back into the master branch. Git provides a powerful and systematic way of merging branches and handling conflicts that arise along the way.
+
+**Git branches are tidy because there is only one working tree, no matter how many branches you create.** The versions of the files in your working directory are determined by which branch is active. Let's say you have two branches: the *master* branch, and an *experimental* branch. When you switch from the master branch to the experimental branch, the files in your working directory instantly transform to the versions relevant to the experimental branch. When you switch to the master branch, the files in your working directory instantly transform to the versions relevant to the master branch. In other words, you needn't have a separate clone of your project for each branch. The single working tree changes, depending on which branch you're using.
+
+For example, let's say you have a single file called foo in your project, and you have the two aforementioned branches: master and experimental. And inside foo you have a single line that reads:
+
+	"I am a line that ends in foo."
+
+Now, suppose you switch to the experimental branch and edit the line so it reads:
+
+	"I am a line that ends in bar."
+
+Once you've committed that change (I discuss committing changes ahead), and switch back to the master branch, the line will once again read:
+
+	"I am a line that ends in foo."
+
+And of course, switching back to experimental, the line will read:
+
+	"I am a line that ends in bar."
+
+That's a pretty silly example, but you can sense how powerful this arrangement is when working with multiple changes in multiple files in your project's source code. With a single command, you transform your entire project to another state or version all in a single working tree.
+
+
+A Simple Example of Branching
+---------
+
+Now that your appetite is whetted, let's dive into an actual example of branching in Git and learn the basic git branching commands. 
+
+This example will be very simple. Soon enough, we'll dive into trickier branching, but for now you need only master the basic concepts, and a simple example will do just fine. 
+
+To follow along with the example, you must already have Git installed. If you don't have it installed, please see <a href="installing-git">Installing Git</a>. Otherwise, feel free to read this section without following along, and return to it when you have Git up and running later.
+
+Okay! Let's branch!
+
+First, we'll need a directory to experiment in. Let's call it "branching_basics":
+
+	$ mkdir branching_basics
+	$ cd branching_basics
+
+We need a file with a line of text in it. I create one like so:
+
+	$ echo "I am a line that ends in foo." > testfile
+
+Now, let's initialize a new Git repository. (If this is your first time creating a Git repository, behold how easy it is!)
+
+	$ git init
+	Initialized empty Git repository in .git/
+	$ git add .
+	$ git commit -a -m "initial commit"
+	Created initial commit 08ecadb: initial commit
+ 	1 files changed, 1 insertions(+), 0 deletions(-)
+ 	create mode 100644 testfile
+
+Three simple commands, and we have our new repository. Trivially easy, no?
+
+In Git, the default branch is the *master* branch. So, right from the very beginning of our brand new repository we're in a branch. How can we tell? Let's look at a few ways of determining which branch is active.
+
+One way is to use the **git-branch** command, like so:
+
+	$ git branch
+	* master
+
+So far, we only have one branch--the *master* branch--so the command lists just one branch. When we have more branches (as we will in a few moments), it will list all the branches. The active branch is indicated by the *.
+
+Another way to see which branch we're in is via the **git-status** command:
+
+	$ git status
+	# On branch master
+	nothing to commit (working directory clean)
+
+See the line that says "# On branch master"? Well, that's where you are; on the branch called "master."
+
+Now, it's really time to branch, so let's do it.
+
+	$ git branch test
+
+There's more than one way to create a new branch, but this is perhaps the simplest. The "test" at the end of the command is the name of our new branch. Not very creative perhaps, but it'll do. I could have said "git branch flamingo", but alas I did not.
+
+Let's see our new branch in the list of branches:
+	
+	$ git branch
+	* master
+	  test
+
+Hooray! There it is. Notice that it doesn't have a * next to it. Master is still the currently active branch. We're created the test branch, but we haven't switched to it yet.
+
+The **git-checkout** command switches branches. Let's try using it to switch to the test branch, then view our list of branches again with git-branch:
+
+	$ git checkout test
+	Switched to branch "test"
+	$ git branch
+	  master
+	* test
+	
+Notice that test is now active. You can use git-checkout to switch back and forth between branches, but since--as we discussed in the last section--git transforms the files in the sole working tree whenever you switch branches, and since our testfile contains the same string in both branches, this isn't very interesting yet.
+
+Let's make it more interesting by changing the contents of testfile in one of the branches. Go ahead and use git-checkout to switch to the test branch (if you switched away from it in your glee). Not sure which branch you're on? Remember: git-branch will show you where you are.
+
+Got it? Great. Let's edit the file. Use your favorite text editor (eg. vim or Textmate) to open the file. Add a second line of text. Whatever you like. If you don't feel like editing, you can add a second line like so:
+
+	$ echo "I am another line of text." >> testfile 
+	
+(Note that there are two >'s in the command above. In UNIX, that means "append STDIN to the file")
+
+Now, commit your changes:
+
+	$ git commit -a -m "Added a second sentence."
+	Created commit de87f1f: Added a second sentence.
+	 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Switch back to the master branch and cat the file:
+
+	$ git checkout master
+	Switched to branch "master"
+	$ cat testfile 
+	I am a line that ends in foo.
+
+Ah ha! No second line! Now, let's see if our second line is still in the test branch:
+
+	$ git checkout test
+	Switched to branch "test"
+	$ cat testfile 
+	I am a line that ends in foo.
+	I am another line of text.
+	
+Perfect!
+
+Now, again, this is an extremely simple example. I invite you to use your imagination to picture how handy even simple branching like this will be when you're dealing not with a single file but with multiple files in multiple subdirectories for your complex software engineering projects. If you want to, say, try out an experimental feature, you can easily create a branch, go crazy with your experiment, and not worry at all that you might be harming the version in master. And when you're done, if you like what you created, you can easily merge the experimental branch back into the master branch. (I discuss branch merging in [article url/title needs to be added here].)
+
+[More coming soon!]
+
+<%tbd%>
+
