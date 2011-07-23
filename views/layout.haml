@@ -18,9 +18,10 @@
 
 
 %body
+
   #container
+
     #banner
-      -# <a href="index.php"><img src=gears2withwords.go3.80.png border="0" alt="Gitology"></a>
       %a(href="/")
         %img{:src => 'gears2withwords.go3.80.png'}
     #tagline
@@ -29,7 +30,7 @@
     %h1= @title
     
     #contentcontainer
-    =yield  
+      =yield  
     
     #footer
       Gitology is good for you!

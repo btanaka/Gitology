@@ -17,7 +17,7 @@ body {
 	color: #222;
 	text-align: center;
 	line-height: 1.5em;
-	background: #000000 url( "../images/bggrad01.gif" ) repeat-x;
+	background: #000000 url( "/bggrad01.gif" ) repeat-x;
 }
 
 div#container
@@ -84,6 +84,8 @@ a:visited {
 }
 
 #contentcontainer {
+	text-align: left;
+	padding: 6px 6px 6px 6px;
 }
 
 table {
