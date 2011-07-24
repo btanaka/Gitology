@@ -17,7 +17,8 @@ body {
 	color: #222;
 	text-align: center;
 	line-height: 1.5em;
-	background: #000000 url( "/bggrad01.gif" ) repeat-x;
+/*	background: #000000 url( "/bggrad01.gif" ) repeat-x;*/
+	background: #000000 url( "/pattern_30.gif" ) repeat;
 }
 
 div#container
