@@ -1,8 +1,6 @@
 Branching Basics
 ================
 
-<%draft%>
-
 <div class="inthisguide">
 <strong>In This Guide:</strong>
 <p>

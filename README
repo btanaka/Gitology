@@ -6,3 +6,9 @@ Will update this README when the project is more mature.
 
 -b
 
+Required Gems
+=============
+* sinatra
+* haml
+* rdiscount
+
