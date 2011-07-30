@@ -2,9 +2,9 @@ Branching Basics
 ================
 
 <div class="inthisguide">
-<strong>In This Guide:</strong>
+<strong>In This Chapter:</strong>
 <p>
-<ul>
+<ul class=inthisguide>
 <li> What is Branching?</li>
 <li>How Do Branches Work in Git?</li>
 <li>A Simple Example of Branching</li>
@@ -171,5 +171,4 @@ Now, again, this is an extremely simple example. I invite you to use your imagin
 
 [More coming soon!]
 
-<%tbd%>
 

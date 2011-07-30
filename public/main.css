@@ -328,13 +328,16 @@ blockquote {
 
 .inthisguide {
 	font-size: 1em;
-	border: 1px solid #dfdfdf;
+	border: 0px solid #dfdfdf;
 	background: #efefef;
 	padding: 0.5em;
 /*	color: #555;*/
 	margin-bottom: 1em;
-	line-height: 1em;
+	line-height: 1.25em;
 /*	list-style-type: disc;*/
+}
+.inthisguide ul {
+	padding-left: 2em;
 }
 
 code {
