@@ -12,6 +12,8 @@ Branching Basics
 </p>
 </div>
 
+<div class="draftnotice"><strong>Note:</strong> This article is a draft, is subject to revision, and is possibly incomplete. This notice will be removed when article is final.</div>
+
 What is Branching?
 --------
 
