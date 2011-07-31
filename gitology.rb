@@ -9,7 +9,7 @@ require 'sinatra';
 TITLE = "Gitology - A wealth of knowledge about Git"
 BASEPATH = "." # base filesystem path
 CHAPTERDIR = "chapters" # where the chapters live 
-CHAPTEREXT = "mdwn"
+CHAPTEREXT = "mdwn" # markdown for the win
 
 
 #
@@ -17,16 +17,8 @@ CHAPTEREXT = "mdwn"
 #
 class Gitology
 
-  def initialize()
-    @foo = "bar"
-  end
-
-  def foo
-    # getter for foo
-    return @foo
-  end
-
   def chapter_to_string(chapter_name)
+    # FIXME: address any security issues
     @pathname = CHAPTERDIR + "/" + chapter_name + "." + CHAPTEREXT
     @chapter_contents = File.open("#{@pathname}", 'r') { |file| file.read }
     return @chapter_contents
@@ -52,7 +44,6 @@ end
 #
 get '/chapter/:argument' do
   @requested_chapter = params[:argument]
-  @content = gitology.chapter_to_string(@requested_chapter)
-  # TODO: call object method here
+  @content = gitology.chapter_to_string(@requested_chapter) # read file into a string
   haml :chapter
 end
