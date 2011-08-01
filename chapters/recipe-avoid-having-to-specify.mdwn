@@ -1,0 +1,25 @@
+Gitology Recipe: Avoid Having to Specify Which Branch to Pull (Set Master as Default Remote Branch)
+======
+
+When Git doesn't know which remote branch you're trying to pull, you'll see a message that begins: "You asked me to pull without telling me which branch you want to merge with..." Most commonly, you're pulling from master, and you can specify it explicitly like so:
+
+	git pull origin master
+
+But what if you're always (or almost always) pulling master? Wouldn't it be great to be able to set master as the default and simply type: 
+
+	git pull
+	
+You just saved 14 characters of typing! Who wouldn't want that? If you want master to be default on a remote pull, simply add the following lines to your .git/config:
+
+	[branch "master"]
+	        remote = origin
+	        merge = /refs/heads/master
+	
+You can add the lines shown above by editing .git/config or via the following commands:
+
+	$ git config branch.master.remote 'origin'
+	$ git config branch.master.merge '/refs/heads/master'
+	
+<!-- TODO: add push info too as necessary -->
+
+[Back to Gitology Recipes](git-recipes)

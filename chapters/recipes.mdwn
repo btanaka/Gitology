@@ -1,0 +1,10 @@
+Git Recipes for Common Tasks
+================
+
+Here are some handy Git recipes.
+
+* [Avoid Having to Specify Which Branch to Pull (Set Master as Default Remote
+Branch)](recipe-avoid-having-to-specify)
+
+* [List Files That Have Changed Between Two
+Revisions](recipe-list-files-that-have-changed-between-two-revisions)

@@ -1,0 +1,40 @@
+Gitology Recipe: List Files That Have Changed Between Two Revisions
+======
+
+
+It's often useful to see which files have changed between two revisions.
+Fortunately, it's as easy as it is useful.
+
+To list all the files that have changed between two revisions, simply:
+
+	$ git diff --name-only foo bar
+
+where foo is one revision and bar is the other.
+
+For example, let's say you have a repository containing three files: a, b,
+and c. You modify "a" and commit. Then you modify "b" and commit.
+
+You'll need the revision IDs for git diff. There are multiple ways to get
+the IDs, but in our example, I use git log as shown below. (Note that I'm
+piping the output to egrep to keep the output terse--only the commit lines
+and the date stamps will be printed. You needn't do this. Also, you will
+likely be plucking the commit IDs out of gitk or an equivalent tool.)
+
+	$ git log | egrep "commit|Date"
+	commit c29608c8fa81c916bc70d038abe5090073d16a15
+	Date:   Thu Mar 19 18:10:57 2009 -0700
+	commit 5a1cf5ccae880596ec80eeb20b22ac69f455e17e
+	Date:   Thu Mar 19 18:10:43 2009 -0700
+	commit dd2a334406a0f481b9048a7d9872c1466a528de4
+	Date:   Thu Mar 19 18:07:50 2009 -0700
+
+Now, list the files that have changed between the two most recent
+revisions, like so:
+
+	$ git diff --name-only 5a1cf c2960
+	b
+
+That's it! Only "b" changed. In real life, the file listing will doubtlessly
+be longer and more useful.
+
+[Back to Gitology Recipes](git-recipes)

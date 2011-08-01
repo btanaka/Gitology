@@ -1,0 +1,18 @@
+About Gitology.com
+===================
+
+Gitology is a collection of clearly-written guides that teach you how to use Git effectively whether you're a beginner, have some experience, or are an expert. 
+
+The site is a [Sinatra](http://www.sinatrarb.com/)/[HAML](http://haml-lang.com/) app hosted on [Heroku](http://www.heroku.com/). 
+
+About the Author
+===================
+
+Brian Tanaka has been in the technical field since 1992. He has
+worked for a wide array of companies such as: The WeLL, Silicon
+Graphics, Intuit, Nintendo, and RealNetworks. His magazine articles
+have appeared in Linux Journal, LinuxWorld.com, and Sys Admin
+Magazine. He was technical editor on Practical Firewalls by Terry
+William Ogletree, and is the author of Take Control of Permissions
+in Leopard.
+

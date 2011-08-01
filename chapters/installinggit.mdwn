@@ -1,0 +1,6 @@
+Installing Git
+================
+
+<%tbd%>
+
+<%draft%>
