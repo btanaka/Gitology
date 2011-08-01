@@ -22,4 +22,4 @@ You can add the lines shown above by editing .git/config or via the following co
 	
 <!-- TODO: add push info too as necessary -->
 
-[Back to Gitology Recipes](git-recipes)
+[Back to Gitology Recipes](/chapter/recipes)

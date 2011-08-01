@@ -37,4 +37,4 @@ revisions, like so:
 That's it! Only "b" changed. In real life, the file listing will doubtlessly
 be longer and more useful.
 
-[Back to Gitology Recipes](git-recipes)
+[Back to Gitology Recipes](/chapter/recipes)
