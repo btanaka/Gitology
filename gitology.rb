@@ -24,6 +24,16 @@ class Gitology
     return @chapter_contents
   end
 
+  def make_fourohfour()
+    @fourohfours = ["Gadzooks!",
+      "Great Caesar's Ghost!",
+      "Sad Trombone!",
+      "Well this is awkward...",
+      "Jinkies!"]
+    @fourohfour = @fourohfours[rand(@fourohfours.length)]
+    return @fourohfour
+  end
+
 end
 
 gitology = Gitology.new
@@ -47,3 +57,13 @@ get '/chapter/:argument' do
   @content = gitology.chapter_to_string(@requested_chapter) # read file into a string
   haml :chapter
 end
+
+
+#
+# 404
+#
+not_found do
+  @fourohfour = gitology.make_fourohfour
+  haml :fourohfour
+end
+
