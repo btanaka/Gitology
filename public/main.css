@@ -127,7 +127,8 @@ h1 {
 	padding: 12px 3px 3px 0px;
 	margin-bottom: 10px;
 /*	color: #800000;*/
-	color: #377c3b; /* the new green */
+/*	color: #377c3b; */ /* the new green */ 
+	color: #333;
 	font-size: 1.75em;
 	/*border-bottom: 1px solid #dfdfdf;*/
 /*	font-family: Georgia, "Times New Roman", Times, serif;*/
