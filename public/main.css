@@ -341,6 +341,10 @@ blockquote {
 	padding-left: 2em;
 }
 
+ul {
+	padding-left: 2em;
+}
+
 code {
 	color: #00f;
 	font-size: 1.2em;
