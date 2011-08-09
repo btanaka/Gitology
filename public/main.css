@@ -81,6 +81,12 @@ a:visited {
 	border-bottom: 1px solid #afafaf;
 }
 
+.error {
+	border: solid 1px #f00;
+	background: #efefef;
+	padding: 0.25em 0.25em 0.25em 0.5em;
+}
+
 #menu {
 }
 

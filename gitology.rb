@@ -11,6 +11,10 @@ BASEPATH = "." # base filesystem path
 CHAPTERDIR = "chapters" # where the chapters live 
 CHAPTEREXT = "mdwn" # markdown for the win
 
+#
+# chapter config
+#
+$chapter_list = ["branching-basics", "recipes", "about"]
 
 #
 # classy
@@ -54,8 +58,14 @@ end
 #
 get '/chapter/:argument' do
   @requested_chapter = params[:argument]
-  @content = gitology.chapter_to_string(@requested_chapter) # read file into a string
-  haml :chapter
+  if ! $chapter_list.include?(@requested_chapter)
+    @error = %[<div class="error">Error: Chapter not found.</div>]
+    # TODO: pass this to index and make index display it if set
+    haml :index
+  else
+    @content = gitology.chapter_to_string(@requested_chapter) # read file into a string
+    haml :chapter
+  end
 end
 
 
