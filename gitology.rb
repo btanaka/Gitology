@@ -14,7 +14,13 @@ CHAPTEREXT = "mdwn" # markdown for the win
 #
 # chapter config
 #
-$chapter_list = ["branching-basics", "recipes", "about"]
+$chapter_list = [
+  "branching-basics",
+  "recipes",
+  "about",
+  "recipe-list-files-that-have-changed-between-two-revisions",
+  "recipe-avoid-having-to-specify"
+  ]
 
 #
 # classy

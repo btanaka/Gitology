@@ -362,6 +362,12 @@ pre {
 	margin: 0px 0px 10px 0px;
 }
 
+#twitter {
+	position:absolute;
+	left:700px;
+	top:350px;
+}
+
 /* @group CSS TABS */
 
 /* begin css tabs */
