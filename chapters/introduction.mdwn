@@ -1,0 +1,46 @@
+Introduction
+=============
+
+What is Gitology?
+------------------
+
+Gitology clearly explains a wide variety of practical Git concepts and techniques.
+
+Gitology helps you use Git more effectively and enjoy increasingly efficient workflows. Your new knowledge and skills will make your work and life more effortless--and who doesn't want that?
+
+For example, you will learn how to
+
+* Install and configure Git
+* Manage a project with Git
+* Use Git's fantastic branching
+* Set up a collaborative server
+* Solve common problems
+* Much more
+
+Why Read Gitology?
+-------------------------------------
+
+There are two primary reasons to read Gitology:
+
+1. Git is tremendously useful. And the more skilled with it you become, the better your life will be.
+2. Gitology helps you increase your Git skills and knowledge.
+
+Like you, I lead a busy life, so I will respect both our time by explaining exactly what you need to know as clearly as possible. 
+
+Who Is Gitology Written For?
+----------------
+
+Gitology is written primarily for people who are new to Git and people who have mastered basic Git skills but want to explore intermediate techniques. Advanced topics are not covered.
+
+However, that said, it's possble that more advanced topics will be added in the future.
+
+Updates
+-----------------------------------------------------------------------------------------
+
+Gitology is a work in progress. At the time of this writing, I am trying to work on Gitology every day until "version 1.0" is done. 
+You can get news and updates on [Identica](http://identi.ca/gitology) or [Twitter](http://twitter.com/gitology)
+
+Feedback
+-----------------------------------------------------------------------------------------
+
+Feel free to send me suggestions for the site via [Identica](http://identi.ca/gitology) or [Twitter](http://twitter.com/gitology) or via email: brian at gitology.com

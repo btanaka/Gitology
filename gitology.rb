@@ -19,7 +19,8 @@ $chapter_list = [
   "recipes",
   "about",
   "recipe-list-files-that-have-changed-between-two-revisions",
-  "recipe-avoid-having-to-specify"
+  "recipe-avoid-having-to-specify",
+  "introduction"
   ]
 
 #
