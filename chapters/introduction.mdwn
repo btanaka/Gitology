@@ -22,8 +22,8 @@ Why Read Gitology?
 
 There are two primary reasons to read Gitology:
 
-1. Git is tremendously useful. And the more skilled with it you become, the better your life will be.
-2. Gitology helps you increase your Git skills and knowledge.
+* Git is tremendously useful. And the more skilled with it you become, the better your life will be.
+* Gitology helps you increase your Git skills and knowledge.
 
 Like you, I lead a busy life, so I will respect both our time by explaining exactly what you need to know as clearly as possible. 
 
