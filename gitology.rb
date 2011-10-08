@@ -20,7 +20,8 @@ $chapter_list = [
   "about",
   "recipe-list-files-that-have-changed-between-two-revisions",
   "recipe-avoid-having-to-specify",
-  "introduction"
+  "introduction",
+  "benefits-of-using-git"
   ]
 
 #

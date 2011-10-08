@@ -1,0 +1,30 @@
+The Benefits of Using Git
+====================
+
+There are plenty of articles on the Internet about why Git is better than fill-in-the-blank VCS, so I won't enumerate the many ways Git is better than similar systems. But I will talk about the benefits I think Git delivers. The most important benefits can be summarized in this short statement:
+
+__*Git makes your life easier.*__
+
+It's that simple.
+
+You might say, "That sounds appealing, but *how* does it make my life easier?" Well, it turns out that Git makes your life easier in a number of ways.
+
+First, Git empowers you to make commits any time you feel like it, even when you're not connected to the network. That's pretty great. Say, you're on an airplane, or doing a some extra work on the train ride home from work, and you're at a perfect point to do a commit before moving on to the next batch of work. If you're using a centralized VCS, like Subversion, you're stuck if you can't connect to the server. You simply can't commit until you get somewhere where you have connectivity. With Git, you can commit immediately, network or no network. (Not to mention other tasks such as branching, merging, et cetera.)
+
+Second, Git has cheap branching and merging. Though other VCSes have branching and merging, Git's branching is so good and so well implemented, you'll actually use branches frequently, and it'll make your life better. I think you'll be surprised how great it is, and how "cheap" it is (in terms of effort and complexity). We'll get into the details of how branching in Git works further along.
+
+Third, Git enables you to use more flexible workflows that help you work better, smarter, and with less overall stress. That too we'll delve into in detail further along.
+
+And of course, if you're not using any version control system (and, no, manually making copies of your files doesn't count), then Git will help you manage your code and improve your workflow in ways that will blow your mind. Trust me. You're really missing out.
+
+Aside from making your life easier, Git has a number of other benefits, including:
+
+* __Data redundancy and replication__ -- Since there are multiple *full repositories* on multiple machines (instead of one central repository), the risk of project loss due to server failure or some other catastrophe is much lower.
+* __High availability__ -- Server down? Network down? No problem. Work in your repo (commit, view history, branch, etc) to your heart's content. Try that with Subversion!
+* __Only one .git directory <em>per repository</em>__ -- Versus a .svn in every subfolder, which, as you may know from painful personal experience, can lead to problems.
+* __Superior disk utilization and network performance__
+* __Properties such as ignores are much easier to manage than in Subversion__
+* __Collaboration Friendly__ -- Git makes it easy to collaborate on projects with groups of contributors. And with great services like Github, Git's collaboration friendliness is even further magnified.
+* __Not just for code!__ -- Git is great for all sorts of projects, not just hacking code. For example, all of Gitology's written content is managed with Git, not just it's code.
+
+<br /><p>Now's the time to start making your life easier with Git, so let's dive right in.</p>
